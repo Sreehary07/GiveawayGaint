@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Giveaway Participation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Hide default overflow */
+        }
+        body {
+            background: linear-gradient(to right, #2c3e50, #bdc3c7);
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 100vh; /* Ensure body covers full viewport height */
+            box-sizing: border-box;
+        }
+        .home-page, .payment-page, .success-message {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .banner {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .participate-button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .participate-button:hover {
+            background-color: #c0392b;
+        }
+        .giveaway-giants {
+            text-align: center;
+            font-size: 16px;
+            color: #34495e;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .giveaway-giants.visible {
+            opacity: 1;
+        }
+        #payment-form {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+        .qr-code {
+            margin: 20px 0;
+        }
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+        }
+        button[type="submit"] {
+            background-color: #1abc9c;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-page">
+        <div class="banner">
+            <h1>𝐄𝐗𝐂𝐋𝐔𝐒𝐈𝐕𝐄 𝐆𝐈𝐕𝐄𝐀𝐖𝐀𝐘</h1>
+            <p>𝚆𝙸𝙽 𝙴𝚇𝙲𝙸𝚃𝙸𝙽𝙶 𝙿𝚁𝙸𝚉𝙴𝚂</p>
+            <p>𝗧𝗼 𝗽𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗲 𝗶𝗻 𝗧𝗵𝗶𝘀 𝗚𝗶𝘃𝗲𝗮𝘄𝗮𝘆 𝗬𝗼𝘂 𝗡𝗲𝗲𝗱 𝗧𝗼 𝗽𝗮𝘆 𝗢𝗻𝗹𝘆 𝗥𝘀.5</p>
+        </div>
+        <button class="participate-button" onclick="redirectToPaymentPage()">Participate Now</button>
+        <div class="giveaway-giants" id="giveawayGiants">𝐁𝐲 𝐆𝐢𝐯𝐞𝐚𝐰𝐚𝐲 𝐆𝐚𝐢𝐧𝐭𝐬</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Fade-in effect for the "By Giveaway Giants" text
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('giveawayGiants').classList.add('visible');
+            }, 500); // delay for effect
+        });
+
+        // Redirect to the payment page
+        function redirectToPaymentPage() {
+            window.location.href = 'Giveaway.html';
+        }
+    </script>
+</body>
+</html>

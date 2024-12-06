@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Participation Form</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Hide the default overflow */
+        }
+        body {
+            background: linear-gradient(to right, #2c3e50, #bdc3c7);
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow-y: auto; /* Allow vertical scrolling */
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .back-button {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background: #bdc3c7;
+        }
+        #participationForm {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #ecf0f1;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        button[type="submit"], .send-now-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #e74c3c;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button[type="submit"]:hover, .send-now-button:hover {
+            background: #c0392b;
+        }
+        .qr-code {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+        }
+        .send-now-button {
+            background: #1abc9c;
+            margin: 10px 0;
+        }
+        .send-now-button:hover {
+            background: #16a085;
+        }
+        .instructions {
+            text-align: center;
+            font-size: 14px;
+            color: #ecf0f1;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+        <div id="participationForm">
+            <h2>𝐏𝐀𝐑𝐓𝐈𝐂𝐈𝐏𝐀𝐓𝐄 𝐍𝐎𝐖</h2>
+            <form id="form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mobile">Mobile Number:</label><br>
+                <input type="tel" id="mobile" name="mobile" pattern="\d{10}" required><br><br>
+
+                <label for="utr">UTR Number:</label><br>
+                <input type="text" id="utr" name="utr" required><br><br>
+
+                <div class="qr-code">
+                    <img src="qr.png" alt="QR Code">
+                </div>
+
+                <div class="instructions">𝐘𝐨𝐮 𝐂𝐚𝐧 𝐔𝐬𝐞 𝐐𝐫 𝐂𝐨𝐝𝐞 𝐓𝐨𝐨.</div>
+                <div class="instructions">𝐀𝐟𝐭𝐞𝐫 𝐒𝐞𝐧𝐝 𝐓𝐡𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐅𝐢𝐥𝐥 𝐓𝐡𝐞 𝐅𝐨𝐫𝐦 𝐀𝐧𝐝 𝐂𝐥𝐢𝐜𝐤 𝐏𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐭𝐞 𝐁𝐮𝐭𝐭𝐨𝐧</div>
+                <br>
+
+                <button type="submit">Participate</button>
+            </form>
+        </div>
+    </div>
+    <script src="formSubmit.js"></script>
+</body>
+</html>

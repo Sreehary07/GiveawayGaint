@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Participation Success</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to right, #A200FF, #0017FF);
+            font-family: 'Arial', sans-serif;
+            color: #FF3600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden; /* Hide overflow to avoid scrollbars */
+        }
+        .message-container {
+            text-align: center;
+            background: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d81b60;
+        }
+        p {
+            color: #666666;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #d81b60;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-button">← Back</a>
+    <div class="message-container">
+        <h2>Participation Successful!</h2>
+        <p>We are checking your UTR number. You will be notified soon.</p>
+    </div>
+</body>
+</html>
